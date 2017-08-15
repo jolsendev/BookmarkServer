@@ -102,7 +102,7 @@ class Shortener(http.server.BaseHTTPRequestHandler):
 
             # Serve a redirect to the form.
             self.send_response(303)
-            self.send_header('Location', '/')
+            self.send_header('Location', longuri)
             self.end_headers()
         else:
             # Didn't successfully fetch the long URI.
